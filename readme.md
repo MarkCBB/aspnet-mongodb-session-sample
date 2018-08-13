@@ -1,7 +1,7 @@
 ASP.NET core MongoDB session sample 
 ===================================
 
-This is a sample of an ASP.NET core MVC project that uses MongoDB to store the session data.
+This is a sample of an ASP.NET core MVC project that uses MongoDB to store the session data. Contains a demo/test controller and shows how to set up a connection using a connection string or MongoClientSettings object (see class Startup).
 
 You can just clone and run it, but if you prefer to create it by your own from the scratch follow the next steps.
 
@@ -39,8 +39,8 @@ Add this bit:
 services.AddDistributedMongoDBCache(o =>
 {
 	o.ConnectionString = "<enter a valid connection string>";
-	o.DatabaseName = "<DatabaseName>";
-	o.CollectionName = "<CollectionName>";
+	o.DatabaseName = "<enter a valid DatabaseName>";
+	o.CollectionName = "<enter a valid CollectionName>";
 });
 
 services.AddSession(o =>

@@ -32,6 +32,9 @@ namespace aspnet_mongodb_session_sample
                 o.CollectionName = "SessionData";
             });
 
+            
+            // To set up the connection using MongoClientSettings object
+            // uncomment this section and comment the previous.
             // services.AddDistributedMongoDBCache(o =>
             // {
             //     o.MongoClientSettings = new MongoDB.Driver.MongoClientSettings()
