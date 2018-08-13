@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MongoDB.Driver;
 
 namespace aspnet_mongodb_session_sample
 {
@@ -30,6 +31,17 @@ namespace aspnet_mongodb_session_sample
                 o.DatabaseName = "SessionDataBase";
                 o.CollectionName = "SessionData";
             });
+
+            // services.AddDistributedMongoDBCache(o =>
+            // {
+            //     o.MongoClientSettings = new MongoDB.Driver.MongoClientSettings()
+            //     {
+            //         Servers = new MongoUrl("mongodb://mongo1:27018,mongo1:27019,mongo1:27020").Servers,
+            //         WriteConcern = WriteConcern.W1
+            //     };
+            //     o.DatabaseName = "SessionDataBase";
+            //     o.CollectionName = "SessionData";
+            // });
 
             services.AddSession(o =>
             {
