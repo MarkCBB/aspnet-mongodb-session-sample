@@ -15,7 +15,7 @@ You'll find useful documentation about options, configurations, performance note
 ```
 dotnet new mvc -au None
 dotnet add package Microsoft.AspNetCore.Session --version 2.1.1
-dotnet add package MarkCBB.Extensions.Caching.MongoDB --version 2.1.1-rc-t002
+dotnet add package MarkCBB.Extensions.Caching.MongoDB --version 2.1.1
 
 dotnet remove package Microsoft.AspNetCore.CookiePolicy
 
